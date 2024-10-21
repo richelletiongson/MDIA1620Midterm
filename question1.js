@@ -13,6 +13,19 @@ const readline = require('readline').createInterface({
   CHALLENGE (SAVE FOR LATER)
   - if the password set is "forgot" or "reset", and the user's input matches the password exactly. Aside from Access Granted, also display, "This password you set should not be used because it glitches the system".
   - the password set needs to be 5 characters or more, if it is below 5 characters, display "Password is inadequate"
+
+  PLANNING:
+  function will show 1 of 4 possible outputs depending on user input, 4 different conditions
+  output 1 = "Access Granted!" if input === password
+  output 2 = "Access Denied!" if input !== password
+  output 3 = "Here is a hint" if input === "forgot"
+  output 4 = "Let's reset your account" if input === "reset"
+
+  additionally...
+
+  2 additional possible outputs 
+  output 5 = "Access Granted!" and "This password you set should not be used because it glitches the system" if input === password && password === "forgot" || password === "reset"
+  output 6 = "Password is inadequate" if password.length < 5 
   */
   
   
