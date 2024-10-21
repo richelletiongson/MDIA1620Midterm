@@ -42,6 +42,10 @@ const readline = require('readline').createInterface({
         console.log("Let's reset your account");
     }
 
+    if (password === "forgot" || password === "reset") {
+        console.log("This password you set should not be used because it glitches the system");
+    } 
+
   }
   
   //CHALLENGE FUNCTION
@@ -50,11 +54,14 @@ const readline = require('readline').createInterface({
   function StartApp(){
     readline.question('What would you like the password to be?', _password => {
       readline.question('What is the password?', _userInput => {
-  
-        //call your function here.
+
+        if (_password.length < 5) {
+            console.log("Password is inadequate")
+        }
+        passwordChecking(_password, _userInput);
   
         // readline.close();
-        if(_input2 !== "quit"){
+        if(_userInput !== "quit"){
           StartApp();
         } else {
           readline.close();
