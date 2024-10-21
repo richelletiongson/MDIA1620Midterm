@@ -35,10 +35,19 @@ const readline = require('readline').createInterface({
   
   //determine a proper function name and parameter variable name
   function lunchManagementSystem(studentName, lunchMoney, lunchItem, lunchCost){
+    let balance = 0;
+    let amount = 0;
     if (lunchMoney >= lunchCost) {
-        console.log(studentName+ " purchased " +lunchItem+ "purchased!");
+        balance = lunchMoney - lunchCost;
+        console.log(studentName+ " purchased " +lunchItem+ "purchased! Remaining Balance " +balance);
     } else if (lunchMoney < lunchCost) {
-        console.log(studentName+ " does not have sufficient funds to buy " +lunchItem+ "!");
+        amount = lunchCost - lunchMoney;
+        console.log(studentName+ " does not have sufficient funds to buy " +lunchItem+ "! Needs " +amount+ " more.");
+    }
+    if (balance < 5) {
+        console.log("Warning: Low balance!");
+    } else if (balance === 0) {
+        console.log("Balance depleted! Please add more funds.");
     }
   }
   
@@ -48,10 +57,10 @@ const readline = require('readline').createInterface({
         readline.question('What is the lunch item?', _lunchItem => {
           readline.question('How much does the lunch item cost?', _lunchCost => {
   
-            //call your function here.
+            lunchManagementSystem(_studentName, _lunchMoney, _lunchItem, _lunchCost);
   
             // readline.close();
-            if(_input4 !== "quit"){
+            if(_lunchCost !== "quit"){
               StartApp();
             } else {
               readline.close();
