@@ -33,14 +33,25 @@ const readline = require('readline').createInterface({
     */
   
   //determine a proper function name and parameter variable name
-  function TheFunction(paramVariable1, paramVariable2){
+  function gradingSystem(studentName, studentScore){
+
+    if (studentScore  >= 86) {
+        console.log("Excellent! " +studentName+ "has an A");
+    } else if (studentScore >= 72 && studentScore <= 85) {
+        console.log("Great job! " +studentName+ "has a B.")
+    } else if (studentScore >= 60 && studentScore < 72) {
+        console.log("Good effort! "+studentName+ "has a C.")
+    } else if (studentScore >= 50 && studentScore < 60) {
+        console.log("Needs improvement. " +studentName+ "has a D.")
+    } else if (studentScore < 50) {
+        console.log("Fail. "+studentName+ "has a F.")
+    }
   
-    //write your code here
   }
   
   function StartApp(){
-    readline.question('Write a proper question to get the student name', _input1 => {
-      readline.question('Write a proper question to get student score', _input2 => {
+    readline.question('What is the name of the student?', _studentName => {
+      readline.question('What is the score of the student?', _studentScore => {
   
         //call your function here.
   
