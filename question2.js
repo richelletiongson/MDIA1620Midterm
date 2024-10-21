@@ -28,8 +28,8 @@ const readline = require('readline').createInterface({
     additionally...
 
     2 additional possible outputs
-    output 6: "Almost there! [Student Name] is close to a [next grade]." using switch, create nextGrade variable and check if score is less than 2 from next letter grade
-    output 7: "Work Hard! [Student Name] is almost falling to [previous grade]." using switch, create previousGrade variable and check if score is only greater than 2 from previous letter grade
+    output 6: "Almost there! [Student Name] is close to a [next grade]." if score is less than 2 from next letter grade
+    output 7: "Work Hard! [Student Name] is almost falling to [previous grade]." if score is only greater than 2 from previous letter grade
     */
   
   //determine a proper function name and parameter variable name
@@ -46,6 +46,26 @@ const readline = require('readline').createInterface({
     } else if (studentScore < 50) {
         console.log("Fail. "+studentName+ "has a F.");
     }
+
+    if (studentScore === 84) {
+        console.log("Almost there! "+studentName+" is close to A");
+    } else if (studentScore === 70) {
+        console.log("Almost there! "+studentName+" is close to B");
+    } else if (studentScore === 58) {
+        console.log("Almost there! "+studentName+" is close to C");
+    } else if (srudentScore === 48) {
+        console.log("Almost there! "+studentName+" is close to D");
+    }
+
+    if (studentScore === 73) {
+        console.log("Almost there! "+studentName+" is close to A");
+    } else if (studentScore === 69) {
+        console.log("Almost there! "+studentName+" is close to B");
+    } else if (studentScore === 62) {
+        console.log("Almost there! "+studentName+" is close to C");
+    } else if (srudentScore === 53) {
+        console.log("Almost there! "+studentName+" is close to D");
+    }
   
   }
   
@@ -53,7 +73,7 @@ const readline = require('readline').createInterface({
     readline.question('What is the name of the student?', _studentName => {
       readline.question('What is the score of the student?', _studentScore => {
   
-        //call your function here.
+        gradingSystem(_studentName, _studentScore);
   
         // readline.close();
         if(_input2 !== "quit"){
