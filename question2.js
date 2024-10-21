@@ -57,14 +57,14 @@ const readline = require('readline').createInterface({
         console.log("Almost there! "+studentName+" is close to D");
     }
 
-    if (studentScore === 73) {
-        console.log("Almost there! "+studentName+" is close to A");
-    } else if (studentScore === 69) {
-        console.log("Almost there! "+studentName+" is close to B");
-    } else if (studentScore === 62) {
-        console.log("Almost there! "+studentName+" is close to C");
-    } else if (srudentScore === 53) {
-        console.log("Almost there! "+studentName+" is close to D");
+    if (studentScore === 87) {
+        console.log("Work Hard! " +studentName+ " is almost falling to B");
+    } else if (studentScore === 73) {
+        console.log("Work Hard! " +studentName+ " is almost falling to C");
+    } else if (studentScore === 61) {
+        console.log("Work Hard! " +studentName+ " is almost falling to D");
+    } else if (studentScore === 51) {
+        cconsole.log("Work Hard! " +studentName+ " is almost falling to F");
     }
   
   }
