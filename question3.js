@@ -34,16 +34,19 @@ const readline = require('readline').createInterface({
   */
   
   //determine a proper function name and parameter variable name
-  function TheFunction(paramVariable1, paramVariable2,paramVariable3, paramVariable4){
-  
-    //write your code here
+  function lunchManagementSystem(studentName, lunchMoney, lunchItem, lunchCost){
+    if (lunchMoney >= lunchCost) {
+        console.log(studentName+ " purchased " +lunchItem+ "purchased!");
+    } else if (lunchMoney < lunchCost) {
+        console.log(studentName+ " does not have sufficient funds to buy " +lunchItem+ "!");
+    }
   }
   
   function StartApp(){
-    readline.question('Write a proper question to get the student name', _input1 => {
-      readline.question('Write a proper question to get the amount of lunch money', _input2 => {
-        readline.question('Write a proper question to get lunch item name', _input3 => {
-          readline.question('Write a proper question to get lunch item costs', _input4 => {
+    readline.question('What is the name of the student?', _studentName => {
+      readline.question('How much lunch money does the student have?', _lunchMoney => {
+        readline.question('What is the lunch item?', _lunchItem => {
+          readline.question('How much does the lunch item cost?', _lunchCost => {
   
             //call your function here.
   
