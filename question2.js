@@ -38,13 +38,13 @@ const readline = require('readline').createInterface({
     if (studentScore  >= 86) {
         console.log("Excellent! " +studentName+ "has an A");
     } else if (studentScore >= 72 && studentScore <= 85) {
-        console.log("Great job! " +studentName+ "has a B.")
+        console.log("Great job! " +studentName+ "has a B.");
     } else if (studentScore >= 60 && studentScore < 72) {
-        console.log("Good effort! "+studentName+ "has a C.")
+        console.log("Good effort! "+studentName+ "has a C.");
     } else if (studentScore >= 50 && studentScore < 60) {
-        console.log("Needs improvement. " +studentName+ "has a D.")
+        console.log("Needs improvement. " +studentName+ "has a D.");
     } else if (studentScore < 50) {
-        console.log("Fail. "+studentName+ "has a F.")
+        console.log("Fail. "+studentName+ "has a F.");
     }
   
   }
