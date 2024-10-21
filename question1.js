@@ -32,13 +32,13 @@ const readline = require('readline').createInterface({
   //determine a proper function name and parameter variable name
   function passwordChecking(password, userInput){
 
-    if (input === password) {
+    if (userInput === password) {
         console.log("Access Granted!");
-    } else if (input !== password) {
+    } else if (userInput !== password) {
         console.log("Access Denied!");
-    } else if (input === "forgot") {
+    } else if (userInput === "forgot") {
         console.log("Here is a hint");
-    } else if (input === "reset") {
+    } else if (userInput === "reset") {
         console.log("Let's reset your account");
     }
 
