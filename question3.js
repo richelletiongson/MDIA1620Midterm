@@ -17,7 +17,20 @@ const readline = require('readline').createInterface({
     
   - If the student's remaining balance is less than $5, display "Warning: Low balance!"
   - If the student's remaining balance is exactly $0, display "Balance depleted! Please add more funds."
-  
+
+  PLANNING:
+  function will show 1 of 2 outputs depending on user input, 2 different conditions/comparisons (enough or not enough)
+  output 1: "[student name] purchased [lunch item] purchased!" if current lunch money >= cost of lunch 
+  output 2: "[student name] does not have sufficient funds to buy [lunch item]!" if current lunch money < cost of lunch
+
+  additionally...
+
+  4 additional possible outputs
+  (declare balance variable)
+  output 3: "[student name] purchased [lunch item] purchased! Remaining Balance [balance]" balance = lunch money - cost of lunch
+  output 4: "[student name] does not have sufficient funds to buy [lunch item]! Needs [amount] more." balance = cost of lunch - lunch money
+  output 5: "Warning: Low balance!" if balance < 5
+  output 6: "Balance depleted! Please add more funds." if balance === 0
   */
   
   //determine a proper function name and parameter variable name
