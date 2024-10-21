@@ -30,17 +30,26 @@ const readline = require('readline').createInterface({
   
   
   //determine a proper function name and parameter variable name
-  function TheFunction(paramVariable1, paramVariable2){
-  
-    //write your code here
+  function passwordChecking(password, userInput){
+
+    if (input === password) {
+        console.log("Access Granted!");
+    } else if (input !== password) {
+        console.log("Access Denied!");
+    } else if (input === "forgot") {
+        console.log("Here is a hint");
+    } else if (input === "reset") {
+        console.log("Let's reset your account");
+    }
+
   }
   
   //CHALLENGE FUNCTION
   
   
   function StartApp(){
-    readline.question('Write a proper question to set the password', _input1 => {
-      readline.question('Write a proper question to get the user to type the password', _input2 => {
+    readline.question('What would you like the password to be?', _password => {
+      readline.question('What is the password?', _userInput => {
   
         //call your function here.
   
